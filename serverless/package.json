@@ -1,0 +1,13 @@
+{
+  "name": "chatlegalgpt-serverless",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "offline": "serverless offline"
+  },
+  "devDependencies": {
+    "serverless": "^3.39.0",
+    "serverless-offline": "^13.6.0"
+  }
+}

@@ -1,0 +1,28 @@
+service: chatlegalgpt
+
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: python3.11
+  region: eu-west-3
+  stage: ${opt:stage, 'dev'}
+  environment:
+    CHATLEGALGPT_CORS_ORIGINS: "*"
+    CHATLEGALGPT_FAISS_INDEX: ${env:CHATLEGALGPT_FAISS_INDEX, '../indexes/faiss.index'}
+    CHATLEGALGPT_DOCSTORE: ${env:CHATLEGALGPT_DOCSTORE, '../indexes/docstore.jsonl'}
+    CHATLEGALGPT_TOP_K: "5"
+
+functions:
+  api:
+    handler: handler.handler
+    events:
+      - httpApi:
+          path: /{proxy+}
+          method: '*'
+
+plugins:
+  - serverless-offline
+
+# Packaging minimal: pour un vrai déploiement AWS, il faut ajouter un mécanisme de vendor des deps (layers ou zip).
+# Ici, l'objectif est surtout le test local.
