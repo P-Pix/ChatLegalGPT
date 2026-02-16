@@ -1,4 +1,4 @@
-# data_pipeline/ — ingestion → chunks → index FAISS
+# data_pipeline/ - ingestion → chunks → index FAISS
 
 Le pipeline construit l’index utilisé par le backend.
 
