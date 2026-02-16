@@ -1,0 +1,14 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - CHATLEGALGPT_CORS_ORIGINS=http://localhost:5173
+      - CHATLEGALGPT_FAISS_INDEX=/app/indexes/faiss.index
+      - CHATLEGALGPT_DOCSTORE=/app/indexes/docstore.jsonl
+
+  # Frontend: pour dev local, utilisez npm run dev.
+  # Ici, on fournit un conteneur optionnel de build si besoin.
