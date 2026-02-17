@@ -67,7 +67,7 @@ flowchart TB
 
 ### 1) Cloner
 ```bash
-git clone <URL_DU_REPO_GITHUB>
+git clone https://github.com/P-Pix/ChatLegalGPT.git
 cd ChatLegalGPT
 ```
 
@@ -79,14 +79,14 @@ Créer un dump JSONL : `raw/legifrance_dump.jsonl` (1 JSON par ligne) :
 
 Puis :
 ```bash
-python data_pipeline/preprocess.py
-python data_pipeline/build_index.py
+python3 data_pipeline/preprocess.py
+python3 data_pipeline/build_index.py
 ```
 
 ### 3) Backend
 ```bash
 cd backend
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 uvicorn app:app --reload --port 8000
