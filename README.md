@@ -1,4 +1,4 @@
-# ChatLegalGPT — assistant IA pour comprendre le droit français (RAG + LoRA)
+# ChatLegalGPT - assistant IA pour comprendre le droit français (RAG + LoRA)
 
 > « J’aimerais connaître mes droits, mais je ne comprends pas les textes de loi et je n’ai pas le temps de les lire. »
 
