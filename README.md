@@ -40,10 +40,6 @@ flowchart LR
   E <--> F
   E <--> G
 ```
-
-📌 Version image (prête à mettre dans un post / slide) :  
-- `assets/chatlegalgpt_schema_pretty.png`
-
 ---
 
 ## Structure du dépôt (vue synthétique)
